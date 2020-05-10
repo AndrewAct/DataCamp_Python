@@ -1,0 +1,17 @@
+# 5/3/2020
+# A list comprehension produces a list as output, 
+# a generator produces a generator object.
+
+# Create generator object: result
+result = (num for num in range(0, 31))
+
+# Print the first 5 values
+print(next(result))
+print(next(result))
+print(next(result))
+print(next(result))
+print(next(result))
+
+# Print the rest of the values
+for value in result:
+    print(value)
