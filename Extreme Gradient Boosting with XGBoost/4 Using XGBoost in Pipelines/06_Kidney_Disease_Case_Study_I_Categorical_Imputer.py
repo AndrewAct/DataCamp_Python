@@ -25,6 +25,7 @@ categorical_columns = X.columns[categorical_feature_mask].tolist()
 non_categorical_columns = X.columns[~categorical_feature_mask].tolist()
 
 # Apply numeric imputer
+# DataFrameMapper is used to specify how conversion (dataframe to array) happens
 numeric_imputation_mapper = DataFrameMapper(
                                             [([numeric_feature], Imputer(strategy="median")) for numeric_feature in non_categorical_columns],
                                             input_df=True,
