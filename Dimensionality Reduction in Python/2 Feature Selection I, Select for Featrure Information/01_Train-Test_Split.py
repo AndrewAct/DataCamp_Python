@@ -16,7 +16,7 @@ X = ansur_df.drop('Gender', axis = 1)
 
 # Perform a 70% train and 30% test data split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
-
+# Notice: shape[0] give the number of rows, shape[1] give the number of columns
 print("{} rows in test set vs. {} in training set. {} Features.".format(X_test.shape[0], X_train.shape[0], X_test.shape[1]))
 
 # Gender  abdominalextensiondepthsitting  acromialheight  acromionradialelength  anklecircumference  ...  waistdepth  waistfrontlengthsitting  waistheightomphalion  wristcircumference  wristheight
