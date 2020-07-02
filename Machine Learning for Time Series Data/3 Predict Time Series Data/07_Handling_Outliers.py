@@ -8,6 +8,7 @@ def replace_outliers(series):
     # Calculate a mask for the differences that are > 3 standard deviations from zero
     this_mask = absolute_differences_from_mean > (np.std(series) * 3)
     
+    # nanmedian: Compute the median along the specified axis, while ignoring NaNs.
     # Replace these values with the median accross the data
     series[this_mask] = np.nanmedian(series)
     return series
